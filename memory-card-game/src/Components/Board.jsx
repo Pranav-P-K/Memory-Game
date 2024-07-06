@@ -85,17 +85,20 @@ function Board() {
                     )) 
                 } 
             </div> 
-  
-            {won !== 6 ? ( 
-                <div className="comments">Moves : {moves}</div> 
-            ) : ( 
-                <div className="comments"> 
-                    ???????? You Won in {moves} moves ???????? 
-                </div> 
-            )} 
-            <button className="button" onClick={NewGame}> 
-                New Game 
-            </button> 
+            
+            <div className="footer">
+
+                {won !== 6 ? ( 
+                    <div className="comments">Moves : {moves}</div> 
+                ) : ( 
+                    <div className="comments"> 
+                        You Won in {moves} moves!!
+                    </div> 
+                )} 
+                <button className="button" onClick={NewGame}> 
+                    New Game 
+                </button> 
+            </div>
         </div> 
     ); 
 }

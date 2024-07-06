@@ -1,79 +1,89 @@
-/* App.css */
+/* CSS for App */
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-  }
-  
-  .App {
-	height: 100vh;
-	width: 100vw;
-	font-family: 'Arial', sans-serif;
 	background-color: #153842;
+	box-sizing: border-box;
+}
+  
+.App {
+	height: 100%;
+	width: 100%;
+	font-family: 'Arial', sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-  }
+}
   
-  /* CSS for GameBoard component */
-  .container {
+/* CSS for Board component */
+.container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  }
+}
   
-  .header {
+.header {
+	margin-top: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 20px;
-  }
+}
   
-  h1 {
+h1 {
 	font-size: 2rem;
 	color: #f7f7f7;
 	margin-bottom: 10px;
-  }
+}
+
+.footer {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
   
-  .button {
-	padding: 0.5rem 1rem;
+.button {
+	margin-top: 20px;
+	width: 50%;
+	padding: 0.5rem 1.5rem;
 	font-family: 'Arial', sans-serif;
 	font-size: 1rem;
 	font-weight: bold;
 	border-radius: 0.5rem;
 	border: none;
-	background-color: #e63946;
+	background-color: hsl(355, 78%, 56%);
 	color: white;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-  }
+}
   
-  .button:hover {
-	background-color: #d62828;
-  }
+.button:hover {
+	background-color: hsl(355, 78%, 46%);
+}
   
-  .board {
+.board {
 	display: grid;
 	gap: 1rem;
-	margin-top: 2rem;
-  }
+	margin-top: 1rem;
+}
   
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
 	.board {
 	  grid-template-columns: repeat(4, 1fr);
 	  grid-auto-rows: 1fr;
 	}
-  }
+}
   
-  @media (max-width: 599px) {
+@media (max-width: 599px) {
 	.board {
 	  grid-template-columns: repeat(3, 1fr);
 	  grid-auto-rows: 1fr;
 	}
-  }
+}
   
-  .comments {
+.comments {
 	padding: 0.5rem 1rem;
 	background-color: white;
 	margin-top: 20px;
@@ -82,13 +92,12 @@
 	width: 90%;
 	max-width: 600px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  /* CSS for Card component */
-  .face,
-  .back {
-	height: 100px;
-	width: 100px;
+/* CSS for Card component */
+.face, .back {
+	height: 90px;
+	width: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -97,38 +106,36 @@
 	backface-visibility: hidden;
 	position: absolute;
 	transition: transform 0.5s ease;
-  }
+}
   
-  .face {
+.face {
 	background-color: #fff;
 	transform: rotateY(180deg);
-  }
+}
   
-  .back {
+.back {
 	background-image: url(./assets/card-bg-logo.png);
 	background-size: cover;
   	background-position: center;
 	color: #3d1515;
 	border: 1px solid black;
-  }
+}
   
-  .item {
+.item {
 	position: relative;
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	perspective: 1000px;
-  }
+}
   
-  .item .face,
-  .item .back {
+.item .face, .item .back {
 	transition: transform 0.5s ease;
-  }
+}
   
-  .toggled .face {
+.toggled .face {
 	transform: rotateY(0);
-  }
+}
   
-  .toggled .back {
+.toggled .back {
 	transform: rotateY(180deg);
-  }
-  
+}
